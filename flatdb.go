@@ -15,7 +15,7 @@ import "html"
 import "os"
 
 type db struct {
-    storedValues  map[string]string
+	storedValues map[string]string
 }
 
 /*
@@ -44,13 +44,12 @@ func configureHandlers(data *db) {
 }
 
 func runServer(port string) {
-	http.ListenAndServe(":" + port,nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 /*
   Main program
 */
-
 
 func main() {
 	var port string
@@ -65,6 +64,6 @@ func main() {
 	configureHandlers(&data)
 
 	// Run the HTTP server. Eeeek!
-        runServer(port)
+	runServer(port)
 
 }
